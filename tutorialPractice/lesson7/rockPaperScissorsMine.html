@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Lesson 7 - Rock Paper Scissors with Functions</title>
+  </head>
+
+  <body>
+
+    <p>The Rock Paper Scissors Game</p>
+
+
+    <!--ROCK BUTTON-->
+
+    <button onclick=" 
+
+      myChoice = 'rock';
+
+      const chickenWinner = winner('rock');
+
+    ">
+      Rock
+    </button>
+
+
+    <!--PAPER BUTTON-->
+
+    <button onclick="
+
+      const chickenWinner = winner('paper');
+
+    ">
+    Paper
+    </button>
+
+
+    <!--SCISSORS BUTTON-->
+
+    
+    
+    <button onclick="
+
+      const chickenWinner = winner('scissors');
+
+    ">
+    Scissors
+    </button>
+      
+
+    <script>
+
+      // let final = '';
+
+      // function function1(){
+      //   console.log('Hello');
+      //   console.log(4 + 4);
+      // }
+
+      // function1();
+
+      function computerMove(){
+
+        let rivalChoice3 = '';
+
+        const randomNo = Math.random();
+
+        if (randomNo <= 0.33){
+
+          rivalChoice3 = 'rock';
+
+        } else if (randomNo > 0.33 && randomNo < 0.66) {
+
+          rivalChoice3 = 'paper';
+
+        } else {
+
+          rivalChoice3 = 'scissors';
+
+        }
+
+        return rivalChoice3;
+
+      }
+
+      function winner(myChoice){
+
+        const rivalChoice3 = computerMove();
+
+        let winner = '';
+
+        if(rivalChoice3 === myChoice){
+          winner = 'Tie';
+        } else if(myChoice === 'rock' && rivalChoice3 === 'paper'){
+          winner = 'You lose';
+        } else if(myChoice === 'scissors' && rivalChoice3 === 'rock'){
+          winner = 'You lose';
+        } else if(myChoice === 'paper' && rivalChoice3 === 'scissors'){
+          winner = 'You lose';
+        }
+        else {
+          winner = 'You win';
+        }
+
+        alert(`You picked ${myChoice}. Computer picked ${rivalChoice3}, ${winner}`);
+
+        return winner;
+
+      }
+
+    </script>
+
+  </body>
+
+</html>

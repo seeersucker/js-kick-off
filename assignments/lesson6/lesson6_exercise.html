@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Lesson 6 - Exercises</title>
+  </head>
+
+  <body>
+
+    <button onclick="
+      console.log(quantity)">
+      Quantity
+    </button>
+
+  <button onclick="
+    console.log(quantity = 0)">
+    Reset
+  </button>
+
+  <button onclick="
+
+    //ALTERNATIVE
+    if(quantity + 2 > 10){
+
+      alert('The cart is full');
+
+    } else{
+
+      quantity+=2;
+      console.log(quantity);
+
+    }
+    
+    ">
+      Add 2x
+    </button>
+
+    <button onclick="
+
+    //ALTERNATIVE
+    if(quantity + 3 > 10){
+
+      alert('The cart is full');
+
+    } else{
+
+      quantity+=3;
+      console.log(quantity);
+
+    }
+    
+    ">
+      Add 3x
+    </button>
+
+
+    <button onclick="
+
+    if(quantity - 2 < 0){
+
+      alert('Not enough items in the cart');
+
+    } else{
+
+      quantity-=2;
+      console.log(quantity);
+
+    }
+    
+    ">
+      Remove 2x
+    </button>
+
+
+    <button onclick="
+
+    if(quantity - 3 < 0){
+
+      alert('Not enough items in the cart');
+
+    } else{
+
+      quantity-=3;
+      console.log(quantity);
+
+    }
+    
+    ">
+      Remove 3x
+    </button>
+
+
+    <script>
+
+      // 6a && 6b && 6c
+      // const hour = 13;
+      // const name = 'Muhammad';
+
+      // if(hour >= 6 && hour <= 12){
+      //   alert(`Good Morning ${name}!`);
+      // }
+      // else if(hour >= 13 && hour <= 17){
+      //   alert(`Good Afternoon ${name}!`);
+      // }
+      // else if(hour >= 18 && hour <= 23){
+      //   alert(`Good Night ${name}!`);
+      // }
+      // else{
+      //   alert('Input only 24 hour formal');
+      // }
+
+
+      // 6d
+      // const age = 34;
+
+      // const check = age <= 6 || age >= 65;
+
+      // const check2 = check ? 'Discount' : 'No Discount';
+
+      // console.log(check2)
+
+
+      // 6e
+      // const isHoliday = false;
+
+      // const age = 66;
+
+      // const check = (age <= 6 || age >= 65) && isHoliday === false;
+
+      // const check2 = check ? 'Discount' : 'No Discount';
+
+      // console.log(check2);
+
+
+      // 6f - 6j
+      // const randomVar = Math.random();
+      
+      // const output = randomVar < 0.5 ? 'Heads' : 'Tails';
+
+      // const myGuess = 'Heads';
+
+      // const finalOutput = output === myGuess ? 'You win' : 'You lose';
+      
+      // // console.log(randomVar);
+      // // console.log(output);
+      // console.log(finalOutput);
+
+
+      // 6k - 6l
+
+
+      let quantity = 0;
+
+      
+    </script>
+  </body>
+
+</html>

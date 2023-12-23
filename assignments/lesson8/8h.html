@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Lesson 7 - Exercises</title>
+
+	</head>
+
+	<body>
+
+    <p>
+
+      <button onclick="
+    
+        updateCalculation('1');
+     
+      ">
+       1
+      </button>
+  
+      <button onclick="
+      
+        updateCalculation('2')
+      
+      ">
+        2
+      </button>
+  
+      <button onclick="
+      
+       updateCalculation('3')
+     
+      ">
+        3
+      </button>
+
+      <button onclick="
+      
+       updateCalculation('+')
+    
+      ">
+       +
+     </button>
+
+    </p>
+
+
+    <p>
+
+      <button onclick="
+    
+        updateCalculation('4');
+     
+      ">
+       4
+      </button>
+  
+      <button onclick="
+      
+        updateCalculation('5')
+      
+      ">
+        5
+      </button>
+  
+      <button onclick="
+      
+       updateCalculation('6')
+     
+      ">
+        6
+      </button>
+
+      <button onclick="
+      
+       updateCalculation('-')
+    
+      ">
+       –
+     </button>
+
+  </p>
+
+    <p>
+
+      <button onclick="
+    
+        updateCalculation('7');
+     
+      ">
+       7
+      </button>
+  
+      <button onclick="
+      
+        updateCalculation('8')
+      
+      ">
+        8
+      </button>
+  
+      <button onclick="
+      
+       updateCalculation('9')
+     
+      ">
+        9
+      </button>
+
+      <button onclick="
+      
+       updateCalculation('*')
+    
+      ">
+       *
+     </button>
+
+    </p>
+
+    <p>
+
+      <button onclick="
+    
+        updateCalculation('0');
+     
+      ">
+       0
+      </button>
+  
+      <button onclick="
+      
+        updateCalculation('.')
+      
+      ">
+        .
+      </button>
+  
+      <button onclick="
+
+        let outcome = eval(answer);
+        // console.log(outcome);
+        alert(outcome);
+   
+      ">
+        =
+      </button>
+
+      <button onclick="
+      
+       updateCalculation('/')
+    
+      ">
+       /
+     </button>
+
+     <p>
+        <button onclick="
+
+          localStorage.removeItem('answer');
+          answer = '';
+
+        ">
+          Clear
+        </button>
+     </p>
+     
+
+    </p>
+
+		<script>
+
+      // 7g
+      let answer = JSON.parse(localStorage.getItem('answer')) || '';
+
+      function updateCalculation(calculation){
+
+        answer = answer + calculation;
+
+        localStorage.setItem('answer', JSON.stringify(answer));
+
+        console.log(answer);
+
+        return answer;
+
+      }
+
+		</script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

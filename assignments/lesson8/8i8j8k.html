@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>8d - Assigment</title>
+
+	</head>
+
+	<body>
+
+    <button
+
+    onclick="playGame('Heads')"
+  
+    >Heads</button>
+
+    <button
+
+      onclick="playGame('Tails')"
+    
+    >Tails</button>
+
+    <button
+
+      onclick="alert(`Wins: ${score.wins}, Losses: ${score.losses}`);"
+  
+    >Show results</button>
+
+		<script>
+
+      // 8i - 8j - 8k
+
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(x){
+
+        const output = Math.random() < 0.5 ? 'Heads' : 'Tails';
+
+        const finalOutput = output === x ? 'You win' : 'You lose';
+
+        const result = finalOutput === 'You win' ? score.wins+=1 : score.losses+=1;
+
+        alert(`${finalOutput}, Wins: ${score.wins}, Losses: ${score.losses}`);
+
+        localStorage.setItem('score', JSON.stringify(score));
+        
+      }
+
+		</script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+

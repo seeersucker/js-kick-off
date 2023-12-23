@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title> 
+      
+      Lesson 7 - The Rock Paper Scissors Game, Tutorial Followed Versions 
+
+    </title>
+  </head>
+
+  <body>
+
+    <p>The Rock Paper Scissors Game</p>
+
+    <!--ROCK BUTTON-->
+
+    <button onclick=" 
+
+      // myChoice = 'Rock';
+
+      playGame('rock');
+
+    ">
+      Rock
+    </button>
+
+
+    <!--PAPER BUTTON-->
+
+    <button onclick="
+
+      // myChoice = 'Paper';
+
+      // const rivalChoice3 = computerMove();
+      
+      // if(rivalChoice3 === 'paper'){
+      //   final = 'Tie';
+      // } else if(rivalChoice3 === 'scissors') {
+      //   final = 'You lose';
+      // } else if(rivalChoice3 === 'rock'){
+      //   final = 'You win';
+      // }
+      
+      // alert(`You picked paper. Computer picked ${rivalChoice3}, ${final}`);
+
+      playGame('paper'); 
+
+    ">
+    Paper
+    </button>
+
+
+    <!--SCISSORS BUTTON-->
+
+    
+    
+    <button onclick="
+
+      // myChoice = 'Scissors';
+
+      // const rivalChoice3 = computerMove();
+      
+      // if(rivalChoice3 === 'paper'){
+      //   final = 'You win';
+      // } else if(rivalChoice3 === 'scissors') {
+      //   final = 'Tie';
+      // } else if(rivalChoice3 === 'rock'){
+      //   final = 'You lose';
+      // }
+      
+      // alert(`You picked scissors. Computer picked ${rivalChoice3}, ${final}`); 
+
+      playGame('scissors'); 
+  
+    ">
+    Scissors
+    </button>
+      
+
+    <script>
+
+      function computerMove(){
+
+        let rivalChoice3 = '';
+
+        const randomNo = Math.random();
+
+        if (randomNo <= 0.33){
+
+          rivalChoice3 = 'rock';
+
+        } else if (randomNo > 0.33 && randomNo < 0.66) {
+
+          rivalChoice3 = 'paper';
+
+        } else {
+
+          rivalChoice3 = 'scissors';
+
+        }
+
+        return rivalChoice3;
+
+      }
+
+      function playGame(playerMove){
+
+        let final = '';
+
+        const rivalChoice3 = computerMove();
+        
+        if(playerMove === 'scissors'){
+          if(rivalChoice3 === 'paper'){
+            final = 'You win';
+          } else if(rivalChoice3 === 'scissors') {
+            final = 'Tie';
+          } else if(rivalChoice3 === 'rock'){
+            final = 'You lose';
+          }
+        } 
+        
+        else if(playerMove === 'paper'){
+          
+          if(rivalChoice3 === 'paper'){
+            final = 'Tie';
+          } else if(rivalChoice3 === 'scissors') {
+            final = 'You lose';
+          } else if(rivalChoice3 === 'rock'){
+            final = 'You win';
+          }
+
+        }
+
+        else if(playerMove === 'rock'){
+                
+          if(rivalChoice3 === 'paper'){
+            final = 'You lose';
+          } else if(rivalChoice3 === 'scissors') {
+            final = 'You win';
+          } else if(rivalChoice3 === 'rock'){
+            final = 'Tie';
+          }
+
+        }
+
+        alert(`You picked ${playerMove}. Computer picked ${rivalChoice3}, ${final}`);
+
+        return final;
+  
+      }
+
+      // function winner(x,y){
+      //   let winner = '';
+      //   if(x === y){
+      //     winnner = 'Tie';
+      //   } else if(x === 'rock' && y === 'paper'){
+      //     winner = 'You lose';
+      //   } else if(x === 'scissors' && y === 'rock'){
+      //     winner = 'You lose';
+      //   } else if(x === 'paper' && y === 'scissors'){
+      //     winner = 'You lose'
+      //   }
+      //   else {
+      //     winner = 'You win';
+      //   }
+
+      //   return winner;
+      // }
+
+
+    </script>
+
+  </body>
+
+
+</html>

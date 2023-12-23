@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>
+      Cart Quantity - Lesson 5 Project
+    </title>
+
+  </head>
+
+  <body>
+
+    <p>Cart Quantity</p>
+
+    <button onclick="console.log('Cart quantity: ' + quantity)">
+      Show Quantity
+    </button>
+
+    <button onclick="console.log(`Cart quantity: ${quantity++}`)">
+      Add to Cart
+    </button>
+
+    <button onclick="console.log(`Cart quantity: ${quantity += 2}`)">
+      Add 2x
+    </button>
+
+    <button onclick="console.log(`Cart quantity: ${quantity += 3}`)">
+      Add 3x
+    </button>
+
+    <button onclick="console.log(reset + `Cart quantity: ${quantity = 0}`)">
+      Reset Cart
+    </button>
+
+    <script>
+
+      let quantity = 0;
+
+      const reset = 'Cart was reset' + '\n';
+
+    </script>
+    
+  </body>
+
+</html>

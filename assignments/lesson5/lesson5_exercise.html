@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Lesson 5 - Exercises
+    </title>
+  </head>
+  <body>
+
+    <button onclick="console.log(`Items: ${cart}`)">
+      Show Amount
+    </button>
+
+    <button onclick="console.log(`Items: ${cart+=4}`)">
+      Add 4x
+    </button>
+
+    <button onclick="console.log(`Items: ${cart+=5}`)">
+      Add 5x
+    </button>
+
+    <!-- 5i, 5k -->
+    <button onclick="console.log(`Items: ${cart--}`)">
+      Remove from cart
+    </button>
+
+    <!-- 5j -->
+    <button onclick="console.log(`Items: ${cart-=2}`)">
+      -2x
+    </button>
+
+    <button onclick="console.log(`Items: ${cart-=3}`)">
+      -3x
+    </button>
+  
+
+    <script>
+      // 5a
+      const myName = 'Muhammadbobur';
+
+      // 5b
+      console.log(`My name is ${myName}`);
+
+      // 5c
+      const cost = 5 + 6 + 9;
+      console.log(cost);
+
+      // 5d
+      console.log(`Cost of the food: $${cost}`);
+
+      // 5e, 5f
+      const tax = cost * 0.1;
+      console.log(`10% tax is: $${tax}`)
+
+      // 5g
+      const totalCost = tax + cost;
+      console.log(`Total cost: $${totalCost}`)
+
+      // 5h
+      let cart = 0;
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Lesson 6 - Rock Paper Scissors</title>
+  </head>
+
+  <body>
+
+    <p>The Rock Paper Scissors Game</p>
+
+
+    <!--ROCK BUTTON-->
+
+    <button onclick="
+      const randomNum = Math.random();
+
+      let rivalChoice = '';
+
+      let result = '';
+
+      console.log(randomNum);
+
+      if (randomNum <= 0.33){
+
+        result = 'Tie';
+        console.log(result);
+        rivalChoice = 'rock';
+
+      } else if (randomNum > 0.33 && randomNum < 0.66) {
+        
+        result = 'You lose';
+        console.log(result);
+        rivalChoice = 'Rival Choice: Paper';
+
+      } else {
+
+        result = 'You win';
+        console.log(result);
+        rivalChoice = 'Rival Choice: Scissors';
+
+      }
+
+      alert(`You picked rock. Computer picked ${rivalChoice}. ${result}`);
+
+      console.log(rivalChoice);
+
+      //LOGICAL OPERATORS
+      console.log(true && false);
+      console.log(true || false);
+
+      console.log(!true);
+
+    ">
+      Rock
+    </button>
+
+
+    <!--PAPER BUTTON-->
+
+    <button onclick="
+      const randomNum1 = Math.random();
+
+      let rivalChoice1 = '';
+
+      let result1 = '';
+
+      console.log(randomNum1);
+
+      if (randomNum1 <= 0.33){
+
+        result1 = 'You win';
+        console.log(result1);
+        rivalChoice1 = 'rock';
+
+      } else if (randomNum1 > 0.33 && randomNum1 < 0.66) {
+        
+        result1 = 'Tie';
+        console.log(result1);
+        rivalChoice1 = 'paper';
+
+      } else {
+
+        result1 = 'You lose';
+        console.log(result1);
+        rivalChoice1 = 'scissors';
+
+      }
+
+      alert(`You picked paper. Computer picked ${rivalChoice1}. ${result1}`);
+
+      console.log(rivalChoice1);
+
+    ">
+    Paper
+    </button>
+
+      <!--SCISSORS BUTTON-->
+
+      <button onclick="
+      const randomNum2 = Math.random();
+
+      let rivalChoice2 = '';
+
+      let result2 = '';
+
+      console.log(randomNum2);
+
+      if (randomNum2 <= 0.33){
+
+        result2 = 'You lose';
+        console.log(result2);
+        rivalChoice2 = 'rock';
+
+      } else if (randomNum2 > 0.33 && randomNum2 < 0.66) {
+        
+        result2 = 'You win';
+        console.log(result2);
+        rivalChoice2 = 'paper';
+
+      } else {
+
+        result2 = 'Tie';
+        console.log(result2);
+        rivalChoice2 = 'scissors';
+
+      }
+
+      alert(`You picked scissors. Computer picked ${rivalChoice2}. ${result2}`);
+
+      console.log(rivalChoice2);
+
+    ">
+    Scissors
+    </button>
+      
+
+    <script>
+
+    </script>
+
+  </body>
+
+
+</html>
