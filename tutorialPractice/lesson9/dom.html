@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Lesson 9 - DOM(Document Object Model)</title>
+
+	</head>
+
+	<body>
+
+		<button>
+			Hello
+		</button> 
+
+		<script>
+            
+			//document.title = will give us the title of tab at the top of the page
+			console.log(document.title);
+			document.title = 'Changed';
+
+			//document.body = controls all the HTML inside of the “body”
+			console.log(document.body);
+			console.log(typeof document.body);
+
+			//document.body.innerHTML = gives us all the HTML elements 
+			console.log(document.body.innerHTML);
+			// document.body.innerHTML = 'CHANGED'; // Replaces all the elements with 'CHANGED'
+
+			document.body.innerHTML = '<button>Good job!</button>';
+
+			
+
+		</script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
