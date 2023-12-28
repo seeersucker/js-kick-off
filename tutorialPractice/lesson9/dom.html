@@ -10,27 +10,61 @@
 
 	<body>
 
-		<button>
+		<button class="js-button2", onclick="
+
+			let buttEl = document.querySelector('.js-button2');
+
+			buttEl.innerHTML = buttEl.innerHTML !== 'Changed' ? 'Changed' : 'Hello';
+			
+			// NOOB ALTERNATIVE
+			// if(buttEl.innerHTML != 'Changed'){
+			// 	buttEl.innerHTML = 'Changed';
+			// }
+			// else{
+			// 	buttEl.innerHTML = 'Hello';
+			// }	
+			
+			// INCOMPLETE ALTERNATIVE
+			// let cond = button != 'Subscribed' ? (button = 'Subscribed') : (button = 'Hello');
+		
+			">
 			Hello
 		</button> 
 
+		<button class="js-button">
+			Second Button
+		</button> 
+
 		<script>
-            
-			//document.title = will give us the title of tab at the top of the page
-			console.log(document.title);
-			document.title = 'Changed';
 
-			//document.body = controls all the HTML inside of the “body”
-			console.log(document.body);
-			console.log(typeof document.body);
+			// “document.querySelector()” lets us get any element from the page and put it inside JavaScript, in this code we are selecting the 'button' and getting its text via '.innerHTML'
+			console.log(document.querySelector('button').innerHTML);
 
-			//document.body.innerHTML = gives us all the HTML elements 
-			console.log(document.body.innerHTML);
+			// document.querySelector('button').innerHTML = 'Changed';
+
+
+			// We are accessing the class of the button through a class selector while assigning the selector itself to a variable
+			const buttonElement = document.querySelector('.js-button');
+			console.log(buttonElement);
+
+
+			// document.title = will give us the title of tab at the top of the page
+			// console.log(document.title);
+			// document.title = 'Changed';
+
+
+			// document.body = controls all the HTML inside of the “body”
+			// console.log(document.body);
+			// console.log(typeof document.body);
+
+
+			// document.body.innerHTML = gives us all the HTML elements 
+			// console.log(document.body.innerHTML);
+
+
 			// document.body.innerHTML = 'CHANGED'; // Replaces all the elements with 'CHANGED'
-
-			document.body.innerHTML = '<button>Good job!</button>';
-
-			
+			// document.body.innerHTML = '<button>Good job!</button>';
+			// document.body.innerHTML = 'Hello';
 
 		</script>
 
