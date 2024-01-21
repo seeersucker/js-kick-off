@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <title>
+      9d, 9e, 9f - Assigment
+    </title>
+
+  </head>
+
+  <body>
+
+    <input class="input" onkeydown="
+      enterButton();
+    ">
+
+    <button class="submit" onclick="
+
+      output('input', 'display')
+    
+    ">Submit</button>
+
+    <p class="display"></p>
+
+    <script>
+
+      // x = input, y = display
+      
+      function output(x,y){
+
+        let a = document.querySelector(`.${x}`);
+
+        let b = document.querySelector(`.${y}`);
+
+        b.innerHTML = `Your name is ${a.value}`;
+
+      }
+
+      function enterButton(){
+        console.log(event.key);
+        const enterEvent = event.key === 'Enter' ? output('input', 'display') : false;
+      }
+
+    </script>
+
+  </body>
+</html>
