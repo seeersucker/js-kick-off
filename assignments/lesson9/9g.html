@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>9g - Assigment</title>
+
+  </head>
+
+  <body>      
+
+    <p>Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 += $10 shipping.</p>
+
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input placeholder="Cost of order" class="textBox" onkeydown="
+    
+      handleCostKeyDown();
+    
+    ">
+
+    <button onclick="
+    
+      // A function call
+      shippingCalculator();
+    
+    ">
+      
+      Calculate
+
+    </button>
+
+    <p class="totalPrice"></p>
+
+
+    <script>
+
+      function handleCostKeyDown(){
+        console.log(event.key);
+        const enterEvent = event.key === 'Enter' ? shippingCalculator() : false;
+      }
+
+      function shippingCalculator(){
+
+        let boxElement = document.querySelector('.textBox');
+
+        let overallPrice = document.querySelector('.totalPrice');
+
+        let cost = Number(boxElement.value);
+        console.log(Math.round(((7.99+10)*100)));
+
+        if(cost * 0 === 0 && cost > 0){
+          overallPrice.innerHTML = (cost < 40) ? (`Total: $${Math.round((cost+10)*100)/100}`) : 'Free shipping!'; // If we enter 7.99 as an input, console outputed wrong number, this issue was fixed with Math.round along with small changes
+        }
+        else{
+          overallPrice.innerHTML = 'Enter a valid number!'
+        }
+        
+      }
+
+    </script>
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
