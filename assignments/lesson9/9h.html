@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>9h - Assigment</title>
+
+  </head>
+
+  <body>      
+
+    <input placeholder="Type something" class="inputBox" onkeyup="
+      fillUp();
+    ">
+
+    <p class="empty"></p>
+
+    <script>
+
+      function fillUp(){
+        
+        let keyboard = document.querySelector('.inputBox');
+        let paragraph = document.querySelector('.empty');
+
+        paragraph.innerHTML = keyboard.value;
+
+      }
+
+    </script>
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
