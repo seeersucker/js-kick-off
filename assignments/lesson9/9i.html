@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>9i - Assigment</title>
+
+	</head>
+
+	<body>
+
+    <button onclick="
+    
+      updateCartQuantity(-2); 
+    
+    ">
+      -2
+    </button>
+
+    <button onclick="
+      updateCartQuantity(3); 
+  
+    ">
+      +3
+    </button>
+
+    <button onclick="
+      updateCartQuantity(5); 
+  
+    ">
+      +5
+    </button>
+
+    <button onclick="
+      updateCartQuantity(-1); 
+    ">
+      Remove from the cart
+    </button>
+
+    <button onclick="
+      alert(`The quantity: ${paragraphEl.innerHTML}`); 
+    ">
+      Show quantity
+    </button>
+
+    <p class="paragraph">0</p>
+
+		<script>
+
+      let number = 0;
+
+      let paragraphEl = document.querySelector('.paragraph');
+      
+      //ALTERNATIVE FOR 7h - 7i
+      function updateCartQuantity(x){
+
+        // function returnThisObject() {
+        //   console.log(this)
+        // }
+
+        paragraphEl.innerHTML = x < 0 ? (number+=x) : (number+=x);
+
+        if(paragraphEl.innerHTML < 0){
+          paragraphEl.innerHTML = 0
+          alert('Not enough items');
+        } 
+        
+      }
+
+		</script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
