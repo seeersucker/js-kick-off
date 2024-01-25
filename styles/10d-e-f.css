@@ -1,0 +1,18 @@
+.notToggled{
+  background-color:rgb(230, 230, 230);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.isToggled{
+  color: white;
+  background-color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+}
