@@ -53,6 +53,10 @@ body{
   font-weight: bold;
 }
 
-.gameStatus{
+/* .gameStatus{
+  font-size: 30px;
+} */
+
+.newGame{
   font-size: 30px;
 }
