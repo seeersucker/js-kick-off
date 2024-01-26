@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Lesson 10 - DOM Projects with CSS</title>
+
+    <link rel="stylesheet" href="/styles/10h.css">
+
+  </head>
+
+  <body>
+
+    <p class="title">Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 += $10 shipping.</p>
+
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input placeholder="Cost of order" class="textBoxJS textBox" onkeydown="
+    
+      handleCostKeyDown(event);
+    
+    ">
+
+    <button onclick="
+    
+      // A function call
+      shippingCalculator();
+    
+    " class="calculate">
+      
+      Calculate
+
+    </button>
+
+    <p class="totalPriceJS totalPrice">
+      Total:
+    </p> 
+
+    <script src="/scripts/10h.js"></script>
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
