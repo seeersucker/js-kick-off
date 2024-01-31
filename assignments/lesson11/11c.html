@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>11a-b - Assigment</title>
+
+	</head>
+
+	<body>
+
+		<p>Output in the console - 11c</p>    
+
+		<script>
+
+      const nums = [10,20,30,40,50,5];
+      const texts = ['Dre', 'Shady', 'Treach', 'Good'];
+      console.log(nums);
+      console.log(texts);
+
+      function arraySwap(x){
+
+        const firstEl = x[0];
+        const lastEl = x[x.length-1];
+
+        x[0] = lastEl;
+        x[x.length-1] = firstEl;
+
+        return x;
+
+      }
+
+      console.log(arraySwap(nums));
+      console.log(arraySwap(texts));
+
+    </script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
