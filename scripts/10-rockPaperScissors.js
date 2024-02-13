@@ -89,7 +89,7 @@ function winner(myChoice){
   // choicesElement.innerHTML = (`You picked ${myChoice}, Computer picked ${rivalChoice3}`);
 
   // Shortest way
-  choicesElement.innerHTML = (`You <img class="moveIcon" src="/images/${myChoice}-emoji.png"> <img class="moveIcon" src="/images/${rivalChoice3}-emoji.png"> Rival`);
+  choicesElement.innerHTML = (`You <img class="moveIcon" src="/SE/images/${myChoice}-emoji.png"> <img class="moveIcon" src="/SE/images/${rivalChoice3}-emoji.png"> Rival`);
 
   statsElement.classList.add('sizing');
 
