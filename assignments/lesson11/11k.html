@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>11k - Assigment</title>
+
+	</head>
+
+	<body>
+
+		<p>Output in the console - 11k</p>    
+
+		<script>
+
+      // 11k
+      function countPositive(x){
+
+        let counter = 0;
+        let index = 0;
+
+        // ALTERNATIVE WITH WHILE
+        // while(index < x.length){
+        //   if(x[index] > 0){
+        //     counter++;
+        //     index++;
+        //   }
+        //   else{
+        //     index++;
+        //   }
+        // }
+
+        for(let i = 0; i < x.length; i++){
+          if(x[i] > 0){
+            counter++;
+            index++;
+          }
+          else{
+            index++;
+          }
+        }
+
+        return counter;
+
+      }
+
+      console.log(`${countPositive([1,2,45])} positive numbers in the array`);
+
+    </script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
