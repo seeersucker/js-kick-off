@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>11l - Assigment</title>
+
+	</head>
+
+	<body>
+
+		<p>Output in the console - 11l</p>    
+
+		<script>
+
+      // 11k
+
+      // const test = [4,2,9];
+
+      // let counter = 0;
+
+      // let index = 0;
+
+      // for(index; index < test.length; index++){
+
+      //   console.log('Index before: ' + index); 
+
+      //   if(test[counter] === test[index]){
+
+      //     index++;
+
+      //   }
+
+      //   else if(test[counter] > test[index]){
+      //     console.log(test[counter]); 
+      //   }
+
+      //   // else if(test[counter] === test[index]){
+      //   //   index++;
+      //   //   console.log('Index after: ' + index);
+      //   // }
+
+      //   else {
+      //     counter++;
+      //   }
+
+      // }
+      
+
+      // let test = [1,-3,5,-2];
+
+      // let counter = 0;
+      // let timesGreater = 0;
+      
+      // for(let i = 0; i < test.length; i++){
+
+      //   if(test[counter] > test[i]){
+      //     timesGreater++;
+      //   }
+
+      // }
+
+      // if(timesGreater === test.length-1){
+      //   console.log('Greatest: ' + test[counter]);
+      // } 
+
+      // else{
+      //   counter++;
+      //   console.log('Hell no');
+      //   console.log(counter);
+      // }
+
+      // console.log('The times number is greater: ' + timesGreater);
+
+      let test = [1,-3,5,-2,9,9,10,11, -100, -10000];
+      let greatest = test[0];
+      let lowest = test[0];
+      let object = {};
+
+      function minMax(x){
+        for(let i = 1; i < x.length; i++){
+          if(x[i] > greatest){
+            greatest = x[i];
+          }
+          else if(x[i] < lowest){
+            lowest = x[i];
+          }
+        }
+        return object.max = greatest, object.min = lowest;
+      }
+
+      // function min(x){
+      //   for(let i = 1; i < x.length; i++){
+      //     if(x[i] < greatest){
+      //       greatest = x[i];
+      //     }
+      //   }
+      //   return object.min = greatest;
+      // }
+
+      minMax(test);
+      console.log(object);
+      
+
+    </script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
