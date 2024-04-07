@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Lesson 11 - A To-do List Practice</title>
+
+    <link rel="stylesheet" href="/styles/11-todo.css">
+
+	</head>
+
+	<body>
+
+    <input class="inputEl1 inputCSS" placeholder="Task name">
+
+		<button onclick="
+    
+      addTask();
+    
+    ">
+			Add
+		</button>    
+
+    <div>
+
+      <p>Todo List</p>
+
+      <div class="todo-grid-input">
+
+        <input class="inputEl2 taskInput" placeholder="Task name">
+
+        <input type="date" class="dateInputJS dateInput">
+
+        <button onclick="
+          
+          addTodo();
+          renderTaskList();
+
+        " class="addButton">
+          Add
+        </button> 
+
+      </div>
+
+    </div>
+
+
+    <div class="outcomeJS todo-grid"></div>
+
+    <!-- <p class="outcome"></p>  --> <!--We cannot use <p> element inside another <p> elemetn-->
+
+		<script src="/scripts/11-todo.js"></script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
+
+

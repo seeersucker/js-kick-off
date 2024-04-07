@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Lesson 11 - Arrays & Loops</title>
+
+	</head>
+
+	<body>
+
+		<button>
+			Hello
+		</button>    
+
+		<script>
+      
+      // ARRAYS
+
+      const myArray = [10, 20, 30];
+      console.log(myArray);
+
+      // First index/value in the array
+      console.log(myArray[0]);
+
+      // Changes the first value of the array to 92
+      myArray[0] = 92;
+      console.log(myArray);
+
+      // Multivalue array
+      [1, 'Hello', true, {name: 'Audi'}, [1, 2]]
+      
+      //Checking if the given value is an array 
+      console.log(typeof [1, 2]); // Returns 'object'
+      console.log(Array.isArray([1, 2])) // Returns 'true'
+
+      console.log(myArray.length); // 3
+
+      // Adding an element to the existing array
+      myArray.push(100);
+      console.log(myArray); // [92, 20, 30, 100]
+
+      // Removing a value from the array
+      myArray.splice(0, 1); // 'splice' starts removing from the the first index meaning '0' and '1' is how many numbers we want to remove starting from the '0' index
+      console.log(myArray); // [20, 30, 100]
+
+      // LOOPS
+
+      // WHILE LOOP
+      let i = 1;
+
+      while(i <= 5){
+        console.log(i);
+        i++;
+      }
+
+
+      // FOR LOOP
+      for(let i = 1; i < 5; i++){
+        console.log(i);
+      }
+
+
+      // Generating a random number until it is at least 0.5
+      let randomNum = 0;
+
+      while(randomNum < 0.5){
+        randomNum = Math.random();
+        console.log(randomNum);
+      }
+
+
+      // LOOPING THROUGH AN ARRAY
+
+      const todoList = [
+        'Make dinner',
+        'Watch YouTube',
+        'Play Assassin\'s Creed'
+      ];
+
+      for(let index = 0; index <= todoList.length-1; index++){
+        const value = todoList[index];
+        console.log(value);
+      }
+
+      
+      // SUM OF ALL NUMBER IN AN ARRAY
+      const sum = [1,1,3];
+      let value = 0;
+
+      for(let i = 0; i < sum.length; i++){
+        value+=sum[i]
+      }
+      console.log(value);
+
+
+      // DOUBLING THE EACH ELEMENT OF THE ARRAY
+      let numsDoubled = [];
+
+      for(let i = 0; i < sum.length; i++){
+        numsDoubled.push(sum[i]*2); // Doubling the array in line 89
+      }
+      console.log(numsDoubled);
+
+
+      // Arrays are just references
+
+      // In the below given arrays, it is evident if we add a new element to the second array2, the array1 also changes, because both arrays are pointing to the same memory location
+      
+      const array1 = [1,2,3];
+      const array2 = array1.slice(); // Modified
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      // To solve this problem, we can use ".slice()" method which copies the elements of the array1 and assigns them to the array2 which allows us to make modifications to the array2 without touching the array1
+
+
+      // Shortcut: Destructuring
+
+      // In this way, we are assigning a variable for the array indexes along with creating creating the array itself meaning we don't have to create a separate variable to store the array elements and access them
+
+      console.log('\n' + '\n');
+
+      const [firstValue, secondValue] = [1,2,3];
+      console.log(firstValue); // 1
+
+
+      // More about loops: "break" & "continue"
+
+      // "continue"
+
+      console.log('\n' + '\n');
+
+      for(let i = 1; i <= 10; i++){
+        console.log(i);
+        if(i === 8){
+          break;
+        }
+      }
+
+      // "break"
+
+      console.log('\n' + '\n');
+
+      for(let i = 1; i <= 10; i++){
+        if(i === 3){
+          continue; // Skips 3(it will be fourth iteration)
+        }
+        console.log(i);
+        if(i === 8){
+          break; // Outputs numbers until 8
+        }
+      }
+
+      // Skipping the numbers which are evenly divisble by 3
+
+      console.log('\n' + '\n');
+
+      for(let i = 1; i <= 10; i++){
+        if(i % 3 === 0){
+          continue; // Skips all numbers divisible by 3 evenly
+        }
+        console.log(i);
+        if(i === 8){
+          break; // Outputs numbers until 8
+        }
+      }
+
+      // "break" & "continue"  in a while loop
+
+      console.log('\n' + '\n');
+
+      let index = 1;
+
+      while(index <= 10){
+        if(index % 3 === 0){
+          index++;
+          continue;
+        }
+        console.log(index);
+        index++;
+      }
+
+
+      // Using loops with functions
+
+      console.log('\n' + '\n');
+
+      // DOUBLING THE EACH ELEMENT OF THE ARRAY
+      function doubledArray(x){
+        let doubled = [];
+        for(let i = 0; i < x.length; i++){
+          doubled.push(x[i]*2); // Doubling the array
+        }
+
+        console.log(doubled);
+
+      }  
+
+      doubledArray([4000, 5000]);
+      doubledArray([2,2,2.6]);
+
+		</script>
+
+	</body> 
+
+</html>
+
+
+
+
+
+
